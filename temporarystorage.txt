@@ -1,0 +1,66 @@
+// eslint-disable-next-line @typescript-eslint/no-shadow
+  // const uploadNew = async (uuid: string, formData: FormData, type: FileType, count: number) => {
+  //   setCodeButtonLoading(true);
+  //   // console.log(uuid);
+  //   setProgressDisplay('block');
+  //   setPercent(0);
+  //   uploadFilesPost({ identity: uuid, fileType: type }, formData);
+  //   const getStatus = async () => {
+  //     const res = await statusGet({ identity: uuid });
+  //     console.log(`${type} res`, res);
+  //     if (res && res.items && res.items.length > 0) {
+  //       let nonCompleted = false;
+  //       let fileNum = 0;
+  //       for (let i = 0; i < count; i += 1) {
+  //         if (res.items[i].completed === false && (res.items[i].progress || res.items[i].progress === 0)) {
+  //           nonCompleted = true;
+  //           fileNum = i;
+  //           break;
+  //         }
+  //       }
+  //       if (nonCompleted) {
+  //         const progress = res.items[fileNum].progress || 0;
+  //         setPercent(parseFloat(progress.toFixed(2)));
+  //         setTimeout(async () => {
+  //           await getStatus();
+  //         }, 100);
+  //       } else if (nonCompleted === false) {
+  //         setPercent(100);
+  //         message.success('更新成功');
+  //         setTimeout(() => {
+  //           // eslint-disable-next-line no-param-reassign
+  //           formData = new FormData();
+  //           fileCount = 0;
+  //           ref.current?.reload();
+  //           setProgressDisplay('none');
+  //           setCodeButtonLoading(false);
+  //         }, 1500);
+  //       }
+  //     } else {
+  //       setTimeout(async () => {
+  //         await getStatus();
+  //       }, 100);
+  //     }
+  //   };
+  //   getStatus();
+  // };
+
+// let uploadCount = 0;
+  // const onUpload = (_: any, fileList: any): Promise<any> => {
+  //   return new Promise(() => {
+  //     uploadCount += 1;
+  //     if (uploadCount === fileList.length) {
+  //       const formDataAll = new FormData();
+  //       uploadCount = 0;
+  //       fileList.map((file: any) => {
+  //         formDataAll.append('formData', file);
+  //         return true;
+  //       })
+  //       console.log('formData', formDataAll.getAll('formData'));
+  //       const uuid = generateUUID();
+  //       uploadNew(uuid, formDataAll, 'HSCode', fileList.length);
+  //     }
+  //   })
+  // }
+
+// beforeUpload={onUpload}
