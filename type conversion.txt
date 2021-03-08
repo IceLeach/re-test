@@ -1,7 +1,7 @@
 			布尔值		数字		字符串		数组		对象
 布尔值(boolean)		/		false=0,true=1	.toString()		/		/
 数字(number)		0=false,else true	/		.toString()		/		/
-字符串(string)	            	true	            parseInt(),parseFloat()	/		.split(''),[...val]		JSON.parse()
+字符串(string)	            	Boolean.parseBoolean()	            parseInt(),parseFloat()	/		.split(''),[...val]		JSON.parse()
 数组(Type[],Array<Type>)	true		NaN		.toString()		/		{...[val]}
 对象(object)		true		NaN		JSON.stringify()	Object.values()	/
 元组([Type,Type])		true		NaN		.toString()		/		/
